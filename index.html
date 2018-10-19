@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LASOR</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+     }
+  </style>
+</head>
+<body>
+  <h1 id="detected" style="color:red; display:none">Laser Detected!</h1>
+  <div>
+    <h3>GPS</h3>
+    <span id="lat"></span> <br>
+    <span id="long"></span><br>
+  </div>
+  <div>
+    <h3>Compass</h3>
+    <span id="heading"></span><br>
+  </div>
+  <div>
+    <h3>Barometer</h3>
+    <span id="pressure"></span><br>
+    <span id="alt"></span>
+  </div>
+  <div id="map"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./client.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNPpJrGVdbib8NCzqkdBVAwq8NNxYPPnk&callback=initMap"
+  type="text/javascript"></script>
+</body>
+</html>
